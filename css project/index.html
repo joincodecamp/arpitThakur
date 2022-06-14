@@ -2,39 +2,47 @@
   <head>
     <title>Html and Css Project</title>
     <style>
- 
+body{
+  font-family: 'Montserrat', sans-serif !important;
+  margin: 0;
+  padding: 0;
+} 
  .flex-container {
-        
   background-color:#212529;
   color:white;
   display: flex;
-  position:fixed;
   width:100%;
 
 }
-
+.hero-container {
+    background: green;
+    padding: 50px;
+}
+.hero-image-section {
+    text-align: center;
+    color: white;
+}
+.navbar {
+    justify-content: space-between;
+    width: 100%;
+}
+.d-flex{
+  display: flex;
+}
 .flex-container h1{
   color:white;
   display: flex;
 }
 .container {
-display: flex;
-padding-left:20rem;
-   
-}
-
-.nav-link {
-  display: flex;
-    flex-basis: auto;
-    flex-grow: 1;
-    align-items: center;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    
 }
 .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
     margin-bottom: 10px;
     list-style: none;
+    align-items: center;
 }
 .image h1{
   text-align:center;
@@ -55,18 +63,23 @@ padding-left:20rem;
   font-size:40px;
   
 }
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
 .portfolio h1{
   text-align: center;
   color:lightblue;
 font-size:40px;
 }
-.portfolio{
-  margin-left:20%;
+.portfolio img {
+    width: 300px;
+    height: 390px;
+    display: block;
+    flex:0 0 31.23%;
+    padding: 10px;
 }
-h1{
-  text-align: center;
-  color:#2c3e50;
-}
+
 .about{
   display: flex;
   margin-left:100px;
@@ -132,12 +145,12 @@ h1{
     font-weight: bold;
     border-radius: 10px;
 }
-.navbar-nav{
-padding-left:50rem;
-
-
+.navbar-nav li a {
+    padding-left: 30px;
+    color: white;
+    text-decoration: none;
+    
 }
-
 .content-section {
     width: 33.3%;
     margin: 0 auto;
@@ -157,6 +170,7 @@ padding-left:50rem;
   color:#fff;
   font-size: 20px;
     line-height: 1.4em;
+    padding: 15px;
   
 }
 .freelancer{
@@ -165,6 +179,8 @@ padding-left:50rem;
   font-size: 20px;
     line-height: 1.4em;
     color:#fff;
+    padding: 15px;
+  
 }
 input{
   font-size:30px;
@@ -178,13 +194,25 @@ input{
   max-width: 55%;
     margin: 0 auto;
 }
-img{
-  padding:60px 30px 0px;
+
+.navbar-nav li a:hover{
+  color:blue;
 }
-.portfolio h1{
+.navbar h1:hover{
+  color:red;
+}
+h1{
   text-align:center;
-  color:black;
-  padding-right:311px;
+}
+.about-section button{
+  padding: 20px 25px;
+    border: 1px solid #fff;
+     background-color:aqua;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    font-weight:bold;
+
 }
 
 
@@ -192,41 +220,59 @@ img{
 
 
 </style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300&display=swap" rel="stylesheet">
   </head>
   <body>
   
     <nav class="flex-container">
       <div class="container">
-      <h1>START BOOTSTRAP</h1>
-      <div class="nav-link">
+        <div class="navbar d-flex">
+          <h1>START BOOTSTRAP</h1>
      
-      <ul class="navbar-nav" >
-       PORTFOLIO
-        ABOUT
-        CONTACT
-      </ul>
-      </div>
+            <ul class="navbar-nav d-flex" >
+              <li>
+                <a href="#">PORTFOLIO</a>
+              </li>
+              <li>
+                <a href="#">ABOUT</a>
+              </li> <li>
+                <a href="#">CONTACT</a>
+              </li>
+            </ul>
+            </div>
+        </div>
+      
       </div>
     </nav>
   
+      <div class="hero-container">
+        <div class="container">
+          <div class="hero-image-section">
+            <img src="avataaars.svg"alt="image" width="500" height="400">
+            <h1>START  BOOTSTRAP</h1>
+            <h2>Graphic Artist - Web Designer - Illustrator</h2>
+          </div>
+        </div>
+         
+      </div>
+   
+    
       
-    <div class="image">
-      <img src="avataaars.svg"alt="image" width="500" height="400">
+<div class="container">
+  <h1>PORTFOLIO</h1>
 
-      <h1>START BOOTSTRAP</h1>
-      <h2>Graphic Artist - Web Designer - Illustrator</h2>
-    </div>
-    <section class="portfolio">
-      <h1>PORTFOLIO</h1>
-
+  <div class="portfolio">    
+        <img src="cabin.png"alt="image">
+        <img src="cake.png"alt="image">
+        <img src="circus.png"alt="image">
+        <img src="game.png"alt="image">
+        <img src="safe.png"alt="image">
+        <img src="submarine.png"alt="image">
+      </div>  
       
-      <img src="cabin.png"alt="image" width="400" height="300">
-      <img src="cake.png"alt="image" width="400" height="300">
-      <img src="circus.png"alt="image" width="400" height="300">
-      <img src="game.png"alt="image" width="400" height="300">
-      <img src="safe.png"alt="image" width="400" height="300">
-      <img src="submarine.png"alt="image" width="400" height="300">
-      </section>
+</div>
+    
       <div class="main-section">
         <div class="inner-content">
         <h1>ABOUT</h1>
@@ -287,7 +333,7 @@ Clark, MO 65243
      
       </div>
       <div class="footer-section">
-        <p>Copyright@Your Website 2022</p>
+        <p>Copyright © Your Website 2022</p>
       </div>
 </body>
 
