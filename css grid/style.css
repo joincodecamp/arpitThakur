@@ -1,0 +1,31 @@
+.container{
+  border:2px solid black;
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  height:400px;
+  row-gap:20px;
+  column-gap: 20px;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.item1{
+  border:1px solid red;
+  padding: 10px 10px 10px 10px;
+  
+}
+.item2{
+  border:2px solid green;
+  padding: 10px 10px 10px 10px;
+  
+
+}
+.item3{
+  border:2px solid yellowgreen;
+  padding: 10px 10px 10px 10px;
+  grid-area:1 / 2 / 4;
+}
+.item4{
+  border:2px solid brown;
+  padding: 10px 10px 10px 10px;
+  
+}
