@@ -1,0 +1,31 @@
+.container {
+  border:2px solid black;
+  margin:10px 10px;
+  display:flex;
+  
+}
+.item{
+  border:1px solid aqua;
+  margin:10px;
+  justify-content: flex-start;
+}
+.one .login{
+  margin-left: auto;
+}
+.two{
+  display:flex;
+}
+.two .item{
+  flex:1;
+
+}
+.container-three{
+  border:2px solid red;
+  display:flex;
+  
+}
+.box{
+  border:1px solid black;
+  margin:10px 10px;
+  justify-content: center;
+}
