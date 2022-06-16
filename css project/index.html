@@ -1,16 +1,19 @@
 <html>
   <head>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
     <title>Html and Css Project</title>
     <style>
-body{
+ body{
   font-family: 'Montserrat', sans-serif !important;
   margin: 0;
   padding: 0;
+  
 } 
  .flex-container {
   background-color:#212529;
   color:white;
   display: flex;
+  flex-wrap: wrap;
   width:100%;
  
 
@@ -90,6 +93,7 @@ font-size:40px;
   
   background-color: rgb(0, 168, 112);
   color:white;
+  flex-wrap:wrap;
 }
 .last-section{
   display:flex;
@@ -123,11 +127,13 @@ font-size:40px;
 .first-section {
     float: left;
     width: 50%;
+    display:flex;
     
 }
 .second-section {
     width: 50%;
     float: left;
+    display:flex;
 }
 .clear{
   clear: both;
@@ -235,6 +241,14 @@ button{
 img{
   height:250px;
 }
+@media only screen and (max-width: 375px){
+  .portfolio img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
 
 
 
