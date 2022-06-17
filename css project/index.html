@@ -1,13 +1,14 @@
 <html>
   <head>
-    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html and Css Project</title>
     <style>
- body{
+ *, body{
   font-family: 'Montserrat', sans-serif !important;
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 } 
  .flex-container {
   background-color:#212529;
@@ -34,6 +35,7 @@
 }
 .d-flex{
   display: flex;
+  margin:10px;
 }
 .flex-container h1{
   color:white;
@@ -100,6 +102,8 @@ font-size:40px;
   margin-left:100ox;
   padding:20px;
   background-color:#2c3e50;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .footer-section{
   text-align:center;
@@ -127,13 +131,13 @@ font-size:40px;
 .first-section {
     float: left;
     width: 50%;
-    display:flex;
+    
     
 }
 .second-section {
     width: 50%;
     float: left;
-    display:flex;
+  
 }
 .clear{
   clear: both;
@@ -169,6 +173,7 @@ font-size:40px;
     font-size: 20px;
     line-height: 1.4em;
     float:left;
+    
 }
 /* .web-section{
   width:33.3%;
@@ -181,6 +186,7 @@ font-size:40px;
   font-size: 20px;
     line-height: 1.4em;
     padding:15px 0 23px 216px;
+    
   
 }
 .freelancer{
@@ -190,6 +196,7 @@ font-size:40px;
     line-height: 1.4em;
     color:#fff;
     padding: 15px;
+  
   
 }
 input{
@@ -241,15 +248,50 @@ button{
 img{
   height:250px;
 }
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 500px){
   .portfolio img {
     width: 100%;
     height: auto;
+    margin:0;
+  }
+  .freelancer{
+    width:100%;
+    display:unset;
+    padding:0;
+  }
+  .d-flex{
+    flex: unset;
+    flex-direction: column;
+  }
+  
+ 
+  .web-section{
+    width:100%;
+    padding:0;
+  }
+  .last-section{
+    flex-direction: column;
+    padding:0;
+  }
+  .content-section{
+    width:100%;
+    padding:0;
+  }
+  .first-section{
+    width: auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .second-section{
+    width:auto;
+  }
+  input{
+    font-size:20px;
   }
 
+
+
 }
-
-
 
 
 
@@ -259,8 +301,7 @@ img{
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300&display=swap" rel="stylesheet">
   </head>
   <body>
-  
-    <nav class="flex-container">
+<nav class="flex-container">
       <div class="container">
         <div class="navbar d-flex">
           <h1>START BOOTSTRAP</h1>
