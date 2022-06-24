@@ -1,0 +1,13 @@
+body{
+  background-color: aqua;
+}
+.container{
+text-align:center;
+background-color: aqua;
+margin-top:20rem;
+
+}
+button{
+  color:balck;
+  background-color: chartreuse;
+}
