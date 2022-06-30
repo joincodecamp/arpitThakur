@@ -10,13 +10,27 @@
 <body>
   <div class="container">
     <h1>Contact Form</h1>
-    <form>
-      <input type="text"placeholder="Name"><br>
-      <input type="text"placeholder="Email"><br>
-      <input type="text"placeholder="Phone Number"><br>
-      <button>Submit</button>
+    <form onsubmit=" return submitForm()">
+      <div class="col-md-12">
+      <input type="text" id="fname"  placeholder="Name">
+      <span id="alert">Required Field**</span>
+    </div>
+      <div class="col-md-12">
+      <input type="email"id="email"placeholder="Email">
+      <span id="alert2">Required Field**</span>
+      </div>
+      <div class="col-md-12">
+      <input type="text"id="phNumber"placeholder="Phone Number">
+      <span id="alert3">Required Field**</span>
+      </div>
+      <div class="col-md-12">
+     <input type="submit"  value="Submit">
+     </div>
     </form>
   </div>
+  <script src="script.js">
+
+  </script>
 
   
 </body>

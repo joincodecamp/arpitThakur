@@ -16,3 +16,7 @@ button{
   width:400px;
   height:40px;
 }
+span{
+  color: red;
+  display: none;
+}
