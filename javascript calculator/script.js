@@ -5,9 +5,8 @@ let operator;
 
 
 function addValue(input){
-  
-  document.getElementById("calc-screen").value += input;
 
+  document.getElementById("calc-screen").value += input;
   
 }
 function handleOperatorClick(op){

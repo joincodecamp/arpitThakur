@@ -1,0 +1,82 @@
+
+import { useState } from "react";
+
+const Todolist = () => {
+  const [inputVal, setInputVal] = useState("");
+  const[hashtag,setHashtag] = useState("");
+
+  const [todos, setTodo] = useState([]);
+
+  const [filteredTodos, setFilteredTodos] = useState(todos)
+  
+
+  const filter = (e) => {
+    const keyword = e.target.value;
+
+    if (keyword !== '') {
+      const results = todos.filter((todos) => {
+        return todos.text.toLowerCase().startsWith(keyword.toLowerCase());
+        
+      })
+      setFilteredTodos(results);
+    } else {
+      setFilteredTodos(todos);
+     
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+   
+    setTodo([...todos, {text: inputVal, hashtag: hashtag}])
+   
+    setInputVal('')
+    setHashtag('')
+    
+  };
+
+  return (
+    <div className="app-container" id="taskList">
+    <h1 className="app-header">TO DO LIST</h1>
+    <div className="add-task"> 
+    <input type ="search" onChange={filter} required
+        />
+      <form onSubmit={handleSubmit}>
+      
+        <input
+          type="text"
+          value={inputVal}
+          onChange={(e) => setInputVal(e.target.value)}
+          className="task-input"
+        />
+        <input
+          type="text"
+          value={hashtag} onChange={(e)=> setHashtag(e.target.value)}
+          className="task-input" required
+        />
+        <br />
+        <button  className="submit-task">
+          Submit
+        </button>
+       
+      </form>
+    </div>
+    <ul className="task-list">
+      {todos.map((todo, index) => {
+        return (
+          <li className="task-list-item" v-for="task in tasks" key={index}>
+            <label className="task-list-item-label">
+              <span>{todo.text}</span>
+              
+              <span>{todo.hashtag}</span>
+            </label>
+            
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+  )
+    }
+
+export default Todolist
