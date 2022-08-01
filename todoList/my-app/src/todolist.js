@@ -58,7 +58,7 @@ const Todolist = () => {
       <h1 className="app-header">TO DO LIST</h1>
       <div className="add-task">
         <form>
-          <input type="search" onChange={filter} placeholder="Search"
+          <input type="search" onChange={filter} placeholder="Search tasks here"
           ></input>
           <input
             type="text"
@@ -68,7 +68,7 @@ const Todolist = () => {
             placeholder="Add a task"
           />
           <br />
-          <input type="tag" placeholder="Tag" value={hashtag} onChange={(e) => setHashtag(e.target.value)}></input><br />
+          <input type="tag" placeholder="Tags" value={hashtag} onChange={(e) => setHashtag(e.target.value)}></input><br />
           <button onClick={handleSubmit} className="submit-task">
             Submit
           </button>
@@ -80,7 +80,7 @@ const Todolist = () => {
           return (
             <li className="task-list-item" v-for="task in tasks" key={index}>
               <label className="task-list-item-label">
-                <span>{todo.text}</span>
+                {todo.text}
               </label>
               <label className="task-list-item-label">
                 <span onClick={() => filterList(todo.hashtag)}>{todo.hashtag}</span>

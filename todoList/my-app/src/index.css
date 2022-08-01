@@ -84,7 +84,7 @@ ul {
 }
 
 .task-list-item {
-  background-color: #c20909;
+  background-color: #74c209;
   border-radius: 4px;
   margin-bottom: 12px;
   display: flex;
@@ -113,6 +113,10 @@ input{
   margin-top:40px;
   width: 100%;
     font-size: 30px;
+}
+span{
+  color:blue;
+  padding-left:10px;
 }
 
 
