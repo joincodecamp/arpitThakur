@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-const Home = () => {
+import { Link } from "react-router-dom";
+
+const Product = () => {
 
 
   const [product, setProduct] = useState([]);
@@ -66,10 +68,13 @@ const Home = () => {
       <div class="container">
         <div class="row">
           {product.map((item, index) => (
+            
             <div className="col-md-3" key={index}>
               <img src={item.image} className="img-fluid" alt={item.title} />
-              <p>{item.title}</p>
+              <Link to={`/product/${item.id}`}>
+              <p>{item.title}</p></Link>
             </div>
+          
           ))}
         </div>
       </div>
@@ -78,4 +83,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Product

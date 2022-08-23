@@ -1,9 +1,9 @@
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Routes, Route, Link } from "react-router-dom";
-import  About from './about';
-import Home from './Home';
+import { Routes, Route } from "react-router-dom";
 
+import Product from './product';
+import Singleproduct from './singleproduct'
 function App() {
   
   
@@ -11,13 +11,14 @@ function App() {
 
     
     <div>
-  <Link to="/">Home</Link>
-    <Link to="/about">about</Link>
+ 
+   
 
 
 <Routes>
-<Route path="/" element={<Home />} />
-  <Route path="/about" element={<About />} />
+<Route path="/" element={<Product />} />
+<Route path="/product/:id" element={<Singleproduct />} />
+  
   </Routes>
 
 

@@ -1,0 +1,36 @@
+body {
+  margin: 100;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+background-image:url("./images/resume.jpg");
+
+  background-repeat: no-repeat;
+  
+  background-size: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img{
+  width:100%;
+  background-color: aqua;
+  
+}
+.card{
+  float:right;
+  margin-right:40%;
+}
+.image{
+  height:290px;
+  overflow: hidden;
+}
+.project-img{
+  height:290px;
+  overflow: hidden;
+}
