@@ -24,16 +24,27 @@ const Todolist = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     const currentTodos = todos;
-    currentTodos.push({ text: inputVal, hashtag: hashtag });
-
+    await fetch('http://localhost:7000/add_todo', {
+        method: "POST",
+        body: JSON.stringify({
+          content : inputVal
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      }).then((data) => {currentTodos.push({ text: inputVal, hashtag: hashtag });
+      setTodo(currentTodos);
+      // setItemCopy(currentTodos);
+      setInputVal('');
+      setHashtag('')}).catch(() => {
     setTodo(currentTodos);
     // setItemCopy(currentTodos);
     setInputVal('');
     setHashtag('');
-
+      });
   };
 
   const filterList = (tag) => {
