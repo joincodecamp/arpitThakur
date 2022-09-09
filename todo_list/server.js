@@ -33,8 +33,33 @@ app.get('/get_todo',async(req,res)=>{
   }
 });
 
- 
 
+ 
+app.put('/edit_todo/:id',async(req,res)=>{
+  try {
+    let data_id = req.params.id
+    let filter = {"_id":data_id}
+    let data = req.body
+    console.log(data)
+    const edit_todo = await todo.findOneAndUpdate(filter,data) ;
+    res.json({edit_todo})
+  } catch (error) {
+    res.json({message:error})
+    
+  }
+});
+
+app.delete('/delete_todo/:id',async(req,res)=>{
+  try {
+    let data_id = req.params.id
+    let filter = {"_id":data_id}
+    const deleteTodo = await todo.deleteOne(filter);
+    res.json({deleteTodo})
+  } catch (error) {
+    res.json({message:error})
+    
+  }
+});
 
 
 
