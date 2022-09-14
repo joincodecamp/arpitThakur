@@ -1,0 +1,46 @@
+body {
+  background-color: #eee;
+}
+.time {
+  font-size: 10px !important;
+}
+
+.commentlike {
+  font-size: 15px !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+.socials i {
+  margin-right: 14px;
+  font-size: 17px;
+  color: #d2c8c8;
+  cursor: pointer;
+}
+.feed-image img {
+  width: 100%;
+  height: 70%;
+  height: auto;
+}
+
+.comment:hover {
+  color: blue !important;
+}
+.likes:hover {
+  color: red !important;
+}
+
+.feed-profile {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.comment-name {
+  font-size: 12px !important;
+}
+.collapse-options {
+  width: 70px !important;
+  position: absolute;
+}
